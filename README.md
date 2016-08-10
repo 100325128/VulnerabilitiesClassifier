@@ -36,9 +36,13 @@ In order to use VulnerabilitiesClassifier you need a device on which you've inst
 Setup input files and directories
 ----------------------------------
 
-In order to perform the classification, is necessary to download two files. The first one
+In order to perform the classification, is necessary to download two files: 
 
 1. **CVE entries** - [https://cve.mitre.org/data/downloads/index.html] (https://cve.mitre.org/data/downloads/index.html)
+  Select and download "Text Format Raw". An allitems.txt file will be download.  
+2. **NVD data feeds** - [https://nvd.nist.gov/download.cfm#CVE_FEED] (https://nvd.nist.gov/download.cfm#CVE_FEED)
+  Choose the year for which you want to make the classification, download it and unzip it.
+3. Create a new subdirectory named "input" in the directory in which all the scripts of this project have been cloned.
 
 Contributing
 ============
