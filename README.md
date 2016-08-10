@@ -42,7 +42,17 @@ In order to perform the classification, is necessary to download two files:
   Select and download "Text Format Raw". An allitems.txt file will be download.  
 2. **NVD data feeds** - [https://nvd.nist.gov/download.cfm#CVE_FEED] (https://nvd.nist.gov/download.cfm#CVE_FEED)
   Choose the year for which you want to make the classification, download it and unzip it.
-3. Create a new subdirectory named "input" in the directory in which all the scripts of this project have been cloned.
+3. Create a new subdirectory named "input" in the directory in which all the scripts of this project have been cloned. Then put into "input" subdirectory, the allitems.txt file.
+
+Run the classifier
+----------------------------------
+
+Python classifier script is in repository directory:
+
+    > python classifier nvdcve-2.0-YYYY.xml
+
+Expected results
+----------------------------------
 
 Contributing
 ============
