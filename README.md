@@ -38,3 +38,9 @@ Setup input files and directories
 
 Please 
 Please download 
+
+Contributing
+============
+
+I would be delighted if you could help me to improve this work.
+Please use github features to provide your bugfixes and improvements.
