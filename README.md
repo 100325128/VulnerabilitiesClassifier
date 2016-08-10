@@ -26,3 +26,15 @@ More Information
 
 * **Email:** [100325128@alumnos.uc3m.es](100325128@alumnos.uc3m.es)
 
+Getting Started
+===============
+
+In order to use VulnerabilitiesClassifier you need a device on which you've installed:
+
+* python 2.7 or later
+
+Setup input files and directories
+----------------------------------
+
+Please 
+Please download 
