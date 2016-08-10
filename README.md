@@ -21,4 +21,8 @@ VulnerabilitiesClassifier is made of multiple scripts that work together:
 5. **VulnerabilitiesHandler** 
 6. **classifier** 
 
+More Information
+----------------
+
+* **Email:** [100325128@alumnos.uc3m.es](100325128@alumnos.uc3m.es)
 
