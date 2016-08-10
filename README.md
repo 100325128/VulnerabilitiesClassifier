@@ -54,6 +54,13 @@ Python classifier script is in repository directory:
 Expected results
 ----------------------------------
 
+After you run the classifier.py script, four csv files will be generated:
+
+* **application.csv** - vulnerabilities contained in this file are those affecting mobile and desktop applications
+* **desktop.csv** - vulnerabilities contained in this file are those affecting desktop Operating Systems
+* **mobile.csv - vulnerabilities contained in this file are those affecting mobile Operating Systems
+* **noClassify.csv** - vulnerabilities contained in this file are those affecting desktop or mobile Operating Systems that  are not   included in desktop.csv and mobile.csv
+
 Contributing
 ============
 
