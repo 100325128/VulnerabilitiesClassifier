@@ -36,8 +36,9 @@ In order to use VulnerabilitiesClassifier you need a device on which you've inst
 Setup input files and directories
 ----------------------------------
 
-Please 
-Please download 
+In order to perform the classification, is necessary to download two files. The first one
+
+1. **CVE entries** - [https://cve.mitre.org/data/downloads/index.html] (https://cve.mitre.org/data/downloads/index.html)
 
 Contributing
 ============
