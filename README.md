@@ -49,7 +49,7 @@ Run the classifier
 
 Python classifier script is in repository directory:
 
-    > python classifier nvdcve-2.0-YYYY.xml
+    > python classifier.py nvdcve-2.0-YYYY.xml
 
 Expected results
 ----------------------------------
