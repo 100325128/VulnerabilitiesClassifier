@@ -14,6 +14,7 @@ CONST_PATH_APPLICATION=CONST_PATH_OUTPUT + "/application.csv"
 CONST_PATH_OTHER=CONST_PATH_OUTPUT + "/noClassify.csv"
 CONST_PATH_VULN_STATUS=CONST_PATH_INPUT + "/allitems.txt"
 
+#This class allows managing the read and write of different files used by the application
 class FileManager() :
     fileDesktop = ""
     fileMobile = ""
@@ -21,6 +22,7 @@ class FileManager() :
     fileNC = ""
     candidateList = []
 
+    #This function create and write the output files headers
     def createOutputFiles(self) :
         messageError = ""
         if (not os.path.exists(CONST_PATH_OUTPUT)) :
@@ -60,12 +62,14 @@ class FileManager() :
                messageError = "Error while creating file " + CONST_PATH_OTHER
         return messageError
 
+    #This function closes all output files generated
     def closeOutputFiles(self) :
         self.fileDesktop.close()
         self.fileMobile.close()
         self.fileApp.close()
         self.fileNC.close()
 
+    #This function creates the header string for vulnerabilities affecting Desktop OS
     def createHeaderDesktop(self) :
         a = "Description;Vulnerability type;Review;Subcategory;State;Other OS;"
         b = "MS-DOS;Windows NT;Windows 95;Windows 98;Windows 2000;"
@@ -77,7 +81,7 @@ class FileManager() :
         h = "Solaris 7;Solaris 8;Solaris 9;Solaris 10;Solaris 11;"
         i = "Linux;CVSS\n"
         return a + b + c + d + e + f + g + h + i
-
+    
     def writeDesktop(self, cve_id, cve_vulnerability, vulnerable_desktop_list, cvss) :
         if (len(vulnerable_desktop_list) != 0) :
            maxColumns = 42
@@ -103,7 +107,7 @@ class FileManager() :
         line = line + ";" + cvss + "\n"
         self.fileDesktop.write(line)
 
-
+    #This function creates the header string for vulnerabilities affecting Mobile OS
     def createHeaderMobile(self) :
         a = "Description;Vulnerability type;Review;Subcategory;State;Other OS;"
         b = "iphone OS 1.0;iphone OS 1.1;iphone OS 1.1.1;iphone OS 2.0;iphone OS 2.1;"
@@ -117,7 +121,7 @@ class FileManager() :
         j = "BlackBerry 4.5;BlackBerry 4.6;BlackBerry 5.0;BlackBerry 6.0;BlackBerry 7.0;"
         k = "BlackBerry 7.1;BlackBerry 10.0;BlackBerry 10.1;BlackBerry 10.2;BlackBerry 10.3;"
         l = "Symbian 6.0;Symbian 6.1;Symbian 7.0;Symbian 8.0;Symbian 8.1;"
-        m = "Symbian 9.1;Symbian 9.2;Symbian 9.3;Symbian 9.4;Symbian 9.5;"
+        m = "Symbian 9.1;Symbian 9.2;SymbianÂ 9.3;SymbianÂ 9.4;Symbian 9.5;"
         n = "Symbian 10.1;CVSS\n"
         return a + b + c + d + e + f + g + h + i + j + k + l + m + n
 
@@ -135,6 +139,7 @@ class FileManager() :
            line = line + ";" + cvss + "\n"
            self.fileMobile.write(line)
 
+    #This function creates the header string for vulnerabilities affecting applications
     def createHeaderApplication(self) :
         return "Description;Vulnerability type;Review;Subcategory;State;Vendor;Application;Comments;CVSS\n"
 
@@ -144,6 +149,7 @@ class FileManager() :
                line = cve_id + ";" + cve_vulnerability + ";;;;" + vuln[0] + ";" + vuln[1] + ";;" + cvss + "\n"
                self.fileApp.write(line)
 
+    #This function creates the header string for those unclassified vulnerabilities
     def createHeaderNoClassify(self) :
         return "Description;Vulnerability type;Operating System;CVSS\n"
 
